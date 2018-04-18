@@ -1,0 +1,10 @@
+name: shinyone
+title:
+username:
+account: pythia
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 297684
+bundleId: 1311861
+url: https://pythia.shinyapps.io/shinyone/
+when: 1523372378.5001
