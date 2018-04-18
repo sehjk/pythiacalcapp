@@ -1,6 +1,6 @@
 library(shiny)
 
-# Fluid page lays out your inputs and outputs and accepts inputs
+# Fluid page lays out your inputs and outputs and accepts inputs.
 ui <- fluidPage(
 
   titlePanel(title = div(img(src="dihi.png", width = "25%"),"Pythia Risk Calculator"),
