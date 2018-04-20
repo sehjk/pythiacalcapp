@@ -3,14 +3,14 @@ library(shiny)
 # Fluid page lays out your inputs and outputs and accepts inputs.
 ui <- fluidPage(
 
-  titlePanel(title = div(img(src="dihi.png", width = "25%"),"Pythia Risk Calculator"),
-             windowTitle = "Pythia Risk Calculator"),
+  titlePanel(title = div(img(src="dihi.png", width = "25%"),"Post-operative Complication Risk Calculator"),
+             windowTitle = "Post-operative Complication Risk Calculator"),
 
   hr(),
 
   fluidRow(
     column(
-      width = 4,
+      width = 6,
       h4("1. Procedure Details"),
       textInput(
         inputId = "cpt",
@@ -26,10 +26,8 @@ ui <- fluidPage(
         value = "1",
         min = 1,
         max = 5
-      )
-    ),
-    column(
-      width = 4,
+      ),
+      br(),
       h4("2. Demographic and Social History"),
       numericInput(
         inputId = "age",
@@ -76,10 +74,8 @@ ui <- fluidPage(
                     "Current Smoker, Light" = "SMO_STATUSLight Tobacco Smoker",
                     "Current Smoker, Heavy" = "SMO_STATUSHeavy Tobacco Smoker"),
         selected = "SMO_STATUSNever Smoker"
-      )
-    ),
-    column(
-      width = 4,
+      ),
+      br(),
       h4("3. Patient Comorbidities"),
       selectizeInput(
         inputId = "comorbidities",
@@ -140,38 +136,20 @@ ui <- fluidPage(
       br(),
       h4("4. Risk Modifiers:"),
       checkboxInput("inpatient", "Inpatient procedure")
-    )
-  ),
-  h3("Complication Risk Score"),
-  fluidRow(
-    column(
-      width = 4,
-      selectInput(
-        inputId = "cx_coef",
-        label = "Type of complication: ",
-        choices = c("Any complication" = "any_cx",
-                    "Cardiac complication" = "cardiac",
-                    "Vascular complication" = "vascular",
-                    "Neurological complication" = "neuro",
-                    "Renal complication" = "renal",
-                    "Endocrine complication" = "endo",
-                    "Withdrawal complication" = "etoh",
-                    "Falls complication" = "falls",
-                    "Gastric complication" = "gastro",
-                    "Genitourinary complication" = "Genit",
-                    "Hematologic complication" = "hemat",
-                    "Integumetary complication" = "integ",
-                    "Pulmonary complication" = "pulm",
-                    "Sepsis complication" = "sepsis",
-                    "Shock complication" = "shock",
-                    "Death complication" = "deaths")
-      ),
-      p(textOutput('risk_score', inline = T))
     ),
+
     column(
-      width = 8,
-      h5("By Complication"),
-      dataTableOutput('risk_table')
+      width = 6,
+      h3("Risk Prediction"),
+      em("*Death and Complication defined as death or the diagnosis of one of pre-defined ICD codes within 30 days of procedure. Only showing those complications with greater than 5% risk."),
+      br(),
+      hr(),
+      h4("Death Risk"),
+      p(textOutput('risk_score', inline = T)),
+      br(),
+      h4("Complication Risk"),
+      br(),
+      tableOutput('risk_table')
     )
   )
 )
@@ -180,7 +158,7 @@ ui <- fluidPage(
 server <- function(input, output){
 
   crosswalk <- readRDS("data/ccs_crosswalk.rds")
-  coef_table <- readRDS("data/model_coefs_bmi.rds")
+  coef_table <- readRDS("data/model_coefs_pythia.rds")
   crosswalk <- as.data.frame(crosswalk)
   coef_table <- as.data.frame(coef_table)
 
@@ -201,16 +179,16 @@ server <- function(input, output){
     if(input$cpt %in% crosswalk$Code){
       ccsModeled <- ccsLabel %in% coef_table$coef
       if(ccsModeled){
-        coef_sums_interim <- sum(coef_table[coef_table$coef %in% c(input$race, input$meds, input$comorbidities, input$smoke, input$sex, ccsLabel), input$cx_coef])
-        lp <- exp(sum(coef_table[which(coef_table$coef == "(Intercept)"), input$cx_coef])
-                  + input$age*sum(coef_table[which(coef_table$coef == "AGE"), input$cx_coef])
-                  + n_meds*sum(coef_table[which(coef_table$coef == "N_MEDS"), input$cx_coef])
-                  + input$bmi*sum(coef_table[which(coef_table$coef == "BMI"), input$cx_coef])
-                  + input$n_cpt*sum(coef_table[which(coef_table$coef == "N_CPT_CODES"), input$cx_coef])
-                  + input$inpatient*sum(coef_table[which(coef_table$coef == "IN_PATIENT"), input$cx_coef])
+        coef_sums_interim <- sum(coef_table[coef_table$coef %in% c(input$race, input$meds, input$comorbidities, input$smoke, input$sex, ccsLabel), "death"])
+        lp <- exp(sum(coef_table[which(coef_table$coef == "(Intercept)"), "death"])
+                  + input$age*sum(coef_table[which(coef_table$coef == "AGE"), "death"])
+                  + n_meds*sum(coef_table[which(coef_table$coef == "N_MEDS"), "death"])
+                  + input$bmi*sum(coef_table[which(coef_table$coef == "BMI"), "death"])
+                  + input$n_cpt*sum(coef_table[which(coef_table$coef == "N_CPT_CODES"), "death"])
+                  + input$inpatient*sum(coef_table[which(coef_table$coef == "IN_PATIENT"), "death"])
                   + coef_sums_interim)
         risk <- round((lp/(1+lp))*100,1)
-        result <- paste0("Patient's risk for selected complication is: ", risk, "%")
+        result <- paste0("Patient's risk for death within 30-days is: ", risk, "%")
       } else {
         result <- "We cannot predict the risk of this procedure."
       }
@@ -220,7 +198,7 @@ server <- function(input, output){
     print(result)
   })
 
-  output$risk_table <- renderDataTable({
+  output$risk_table <- renderTable({
 
     n_meds <- length(input$meds)
     coef_cols <- which(colnames(coef_table) != "coef")
@@ -254,12 +232,13 @@ server <- function(input, output){
                     c("Integumetary complication","integ"),
                     c("Pulmonary complication","pulm"),
                     c("Sepsis complication","sepsis"),
-                    c("Shock complication","shock"),
-                    c("Death complication","death")), ncol = 2, byrow = T))
+                    c("Shock complication","shock")), ncol = 2, byrow = T))
         colnames(dict) <- c("Complication", "cx_abbr")
         result <- merge(dict, risk)
         result <- result[, 2:3]
         result <- result[order(-rank(result[["Risk (%)"]])),]
+        result$Risk <- ifelse(result[["Risk (%)"]] >= 17 & result[["Complication"]] == "Any complication", "High", "")
+        result <- result[which(result[["Risk (%)"]] >= 5), ]
       } else {
         result <- "We cannot predict the risk of this procedure."
       }

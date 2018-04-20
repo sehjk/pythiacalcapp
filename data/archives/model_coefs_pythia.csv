@@ -1,0 +1,200 @@
+﻿coef,any_cx,card_coefs,death_coefs,endo_coefs,gastro_coefs,genit_coefs,hemat_coefs,integ_coefs,neuro_coefs,pulm_coefs,renal_coefs,sepsis_coefs,shock_coefs,vasc_coefs
+(Intercept),-3.496,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633,-5.1633
+AGE,0.008,0,0,0,0,0,0,0,0,0,0,0,0,0
+BMI,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+IN_PATIENT,0.8586,0.4907,0.4907,0.4907,0.4907,0.4907,0.4907,0.4907,0.4907,0.4907,0.4907,0.4907,0.4907,0.4907
+N_CPT_CODES,0.1208,0.0174,0.0174,0.0174,0.0174,0.0174,0.0174,0.0174,0.0174,0.0174,0.0174,0.0174,0.0174,0.0174
+N_MEDS,0.0335,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACEALASKAN NATIVE,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACEAMERICAN INDIAN,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACEAMERICAN INDIAN OR ALASKAN NATIVE,-0.0493,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACEASIAN,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACEBLACK OR AFRICAN AMERICAN,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACECAUCASIAN/WHITE,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACEHISPANIC,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACENATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACENOT REPORTED/DECLINED,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACEOTHER,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PRIMARY_RACEUNAVAILABLE,-0.3654,0,0,0,0,0,0,0,0,0,0,0,0,0
+SEX,0.0582,0,0,0,0,0,0,0,0,0,0,0,0,0
+SMO_STATUSCurrent Some Day Smoker,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SMO_STATUSFormer Smoker,0.0165,0,0,0,0,0,0,0,0,0,0,0,0,0
+SMO_STATUSHeavy Tobacco Smoker,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SMO_STATUSLight Tobacco Smoker,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SMO_STATUSNever Assessed,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SMO_STATUSNever Smoker,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SMO_STATUSPassive Smoke Exposure - Never Smoker,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SMO_STATUSSmoker, Current Status Unknown",0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SMO_STATUSUnknown If Ever Smoked,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_1,0.4194,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_10,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_100,0.2598,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_101,0.2294,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_102,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_103,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_104,0.2556,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_105,1.6344,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_106,0.0163,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_109,0.7866,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_112,0.9316,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_113,1.5805,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_114,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_117,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_118,0.6052,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_119,0.1717,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_12,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_120,0.1376,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_121,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_122,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_123,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_124,0.439,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_125,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_126,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_129,0.1884,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_13,-0.6043,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_130,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_132,0.3835,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_134,-0.3039,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_14,-0.5201,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_141,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_142,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_143,-0.3412,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_144,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_145,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_146,0.2632,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_147,-0.0154,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_148,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_149,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_15,-0.655,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_150,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_151,-0.134,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_152,-0.1712,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_153,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_154,-0.4239,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_157,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_158,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_159,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_16,-0.4583,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_160,-0.3284,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_161,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_162,-0.0569,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_163,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_164,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_166,-0.284,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_167,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_168,0.853,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_169,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_17,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_170,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_171,0.5397,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_172,0.1796,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_174,-0.1129,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_175,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_176,2.4559,0.6756,0.6756,0.6756,0.6756,0.6756,0.6756,0.6756,0.6756,0.6756,0.6756,0.6756,0.6756,0.6756
+as.matrix(ccs_dat)cpt_class_19,-0.3806,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_2,0.0088,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_20,-0.1903,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_21,-0.1608,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_214,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_22,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_229,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_23,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_24,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_244,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_26,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_27,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_28,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_29,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_3,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_30,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_33,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_34,0.8209,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151,0.151
+as.matrix(ccs_dat)cpt_class_36,0.333,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_38,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_39,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_42,0.1661,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_43,0.7008,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_44,1.5561,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_48,1.8864,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_49,1.0931,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_50,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_51,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_52,0.5535,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_53,1.3942,3.4622,3.4622,3.4622,3.4622,3.4622,3.4622,3.4622,3.4622,3.4622,3.4622,3.4622,3.4622,3.4622
+as.matrix(ccs_dat)cpt_class_54,-0.0853,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_55,0.7101,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_56,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_57,0.0373,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_59,0.7595,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_6,-0.2572,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_60,0.0694,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_61,0.2205,0.5901,0.5901,0.5901,0.5901,0.5901,0.5901,0.5901,0.5901,0.5901,0.5901,0.5901,0.5901,0.5901
+as.matrix(ccs_dat)cpt_class_63,1.1564,2.6467,2.6467,2.6467,2.6467,2.6467,2.6467,2.6467,2.6467,2.6467,2.6467,2.6467,2.6467,2.6467
+as.matrix(ccs_dat)cpt_class_66,-0.0159,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_67,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_7,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_71,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_72,0.2717,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_73,0.741,0.3963,0.3963,0.3963,0.3963,0.3963,0.3963,0.3963,0.3963,0.3963,0.3963,0.3963,0.3963,0.3963
+as.matrix(ccs_dat)cpt_class_74,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_75,0.2369,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_76,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_78,0.1912,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_79,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_80,0.0723,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_84,0.1098,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_85,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_86,0.2053,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_87,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_89,0.5481,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_9,0.0405,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_90,0.2635,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_92,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_94,0.2631,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175,0.0175
+as.matrix(ccs_dat)cpt_class_95,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_96,0.1238,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(ccs_dat)cpt_class_99,0.2903,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Alcohol,0.2298,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Anemia,0.2778,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)BloodLoss,0.1424,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)CHF,0.6383,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151,-0.0151
+as.matrix(dis_dat)Coagulopathy,0.1429,0.1592,0.1592,0.1592,0.1592,0.1592,0.1592,0.1592,0.1592,0.1592,0.1592,0.1592,0.1592,0.1592
+as.matrix(dis_dat)DM,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)DMcx,0.1879,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Depression,0.0949,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Drugs,0.1194,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)FluidsLytes,0.5309,0.1726,0.1726,0.1726,0.1726,0.1726,0.1726,0.1726,0.1726,0.1726,0.1726,0.1726,0.1726,0.1726
+as.matrix(dis_dat)HIV,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)HTN,0.1717,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Hypothyroid,0.0436,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Liver,0.0871,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Lymphoma,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Mets,0.0717,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)NeuroOther,0.2788,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Obesity,0.0689,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)PHTN,0.4786,2.3267,2.3267,2.3267,2.3267,2.3267,2.3267,2.3267,2.3267,2.3267,2.3267,2.3267,2.3267,2.3267
+as.matrix(dis_dat)PUD,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)PVD,0.0113,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Paralysis,0.4376,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Psychoses,0.0702,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Pulmonary,0.1484,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Renal,0.1816,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Rheumatic,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Tumor,0.0556,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(dis_dat)Valvular,0.3166,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645,-0.0645
+as.matrix(dis_dat)WeightLoss,0.1851,0.0087,0.0087,0.0087,0.0087,0.0087,0.0087,0.0087,0.0087,0.0087,0.0087,0.0087,0.0087,0.0087
+as.matrix(meds_all)ANALGESICS,0.0262,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)ANESTHETICS,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)ANTIBIOTICS,0.0852,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)ANTICOAGULANTS,0.8748,1.2362,1.2362,1.2362,1.2362,1.2362,1.2362,1.2362,1.2362,1.2362,1.2362,1.2362,1.2362,1.2362
+as.matrix(meds_all)ANTIHYPERGLYCEMICS,-0.0043,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)ANTINEOPLASTICS,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)ANTIPLATELET DRUGS,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)ANTIVIRALS,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)AUTONOMIC DRUGS,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)CARDIAC DRUGS,0.0692,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)CARDIOVASCULAR,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)CNS DRUGS,0.0039,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)DIURETICS,0.0295,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)HORMONES,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+as.matrix(meds_all)IMMUNOSUPPRESSANTS,0,0,0,0,0,0,0,0,0,0,0,0,0,0

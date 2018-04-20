@@ -1,0 +1,10 @@
+name: pythiacalcapp
+title:
+username:
+account: dihisurgerycalcs
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 326702
+bundleId: 1328885
+url: https://dihisurgerycalcs.shinyapps.io/pythiacalcapp/
+when: 1524207865.94258
