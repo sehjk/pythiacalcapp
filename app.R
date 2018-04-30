@@ -141,11 +141,9 @@ ui <- fluidPage(
     column(
       width = 6,
       h3("Risk Prediction"),
-      em("*Death and Complication defined as death or the diagnosis of one of pre-defined ICD codes within 30 days of procedure. Only showing those complications with greater than 5% risk."),
+      em("*Complication defined as death or the diagnosis of one of pre-defined ICD codes within 30 days of procedure. Only showing those complications with greater than 5% risk."),
       br(),
       hr(),
-      h4("Death Risk"),
-      p(textOutput('risk_score', inline = T)),
       br(),
       h4("Complication Risk"),
       br(),
@@ -247,7 +245,6 @@ server <- function(input, output){
     }
     return(result)
   })
-
 
 }
 

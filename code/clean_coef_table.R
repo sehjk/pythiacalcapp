@@ -4,7 +4,7 @@
 library(data.table)
 
 # Process bmi model
-model_coefs <- fread("data/model_coefs_pythia.csv", colClasses = "character")
+model_coefs <- fread("data/model_coefs_pythia2.csv", colClasses = "character")
 # meds
 model_coefs[["coef"]] <- gsub("as.matrix\\(meds_all\\)", "Meds", model_coefs[["coef"]])
 # comorb
@@ -12,12 +12,12 @@ model_coefs[["coef"]] <- gsub("as.matrix\\(dis_dat\\)", "", model_coefs[["coef"]
 # cpt ccs
 model_coefs[["coef"]] <- gsub("as.matrix\\(ccs_dat\\)", "", model_coefs[["coef"]])
 # get ccs crosswalk
-cpt_ccs <- fread("data/ccs_proc_crosswalk.csv", colClasses = "character")
+cpt_ccs <- readRDS("data/ccs_crosswalk.rds")
 cpt_ccs <- unique(cpt_ccs[, 2:3])
 cpt_ccs[[1]] <- paste0("cpt_class_", cpt_ccs[[1]])
 # merge cpt ccs crosswalk
 cpt_coefs <- model_coefs[["coef"]] %in% cpt_ccs[[1]]
-model_coefs[["coef"]][cpt_coefs] <- merge(model_coefs[, 1], cpt_ccs, by.x = "coef", by.y = "CCS")[["CCS Label"]]
+model_coefs[["coef"]][cpt_coefs] <- merge(model_coefs[, 1], cpt_ccs, by.x = "coef", by.y = "Class")[["Label"]]
 # race
 model_coefs[["coef"]] <- gsub("PRIMARY_RACE", "Race", model_coefs[["coef"]])
 # column names
